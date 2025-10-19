@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #111;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  background: #222;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  margin: 0 10px;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.4s ease;
+}
+
+/* 1. მოძრაობა */
+button.move:hover {
+  transform: translateX(15px);
+}
+
+/* 2. დახრა */
+button.skew:hover {
+  transform: skewX(20deg);
+}
+
+/* 3. ბრუნვა */
+button.rotate:hover {
+  transform: rotate(20deg);
+}
+
+/* 4. გაზრდა */
+button.scale:hover {
+  transform: scale(1.2);
+}
+
+/* 5. ჩრდილი */
+button.shadow:hover {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}

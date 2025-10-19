@@ -1,0 +1,171 @@
+<!-- 1) კომენტარების სახით ახსენი transform: skew() -->
+<!-- 2) კომენტარების სახით ახსენი transform-origin() -->
+<!-- 3) კომენტარების სახით ახსენი transition -->
+<!-- 4) შექმენი div ბლოკი, რომელსაც hover-ზე გამოიყენებ transform: skew(10deg, 5deg). -->
+ <!-- დაამატე transition ისე, რომ გადახრა იყოს გლუვი. div-ს მიეცი ზომა და ფერი, რომ შედეგი კარგად ჩანდეს. -->
+<!-- 5) შექმენი ბლოკი, რომელიც hover-ზე გაიზრდება 1.3-ჯერ (scale(1.3)).დაამატე transition: transform 0.6s ease-in-out;  შედეგი უნდა იყოს რბილი გაზრდა. -->
+<!-- 6) შექმენი ბლოკი, რომელიც hover-ზე ტრიალდება მარცხნივ და მარჯვნივ */ გამოიყენე transform: rotate(45deg); დაამატე transform-origin: top left; რომ ბრუნვა ზედა მარცხენა კუთხიდან დაიწყოს. დაამატე transition, რომ ბრუნვა იყოს ნელი და რბილი  -->
+<!-- 7)  შექმენი სამი განსხვავებული ბლოკი. თითოეულს მიეცი განსხვავებული transform-origin (center, top, bottom), hover-ზე გააკეთე rotation(20deg) და დააკვირდი განსხვავებულ შედეგს. კომენტარებში ახსენი როგორ მოქმედებს transform-origin ეფექტზე -->
+<!-- 8) შექმენი ბლოკი, რომელიც hover-ზე გადაადგილდება მარჯვნივ 100px და ოდნავ იხრება, გამოიყენე transform: translateX(100px) skew(5deg);  დაამატე transition: all 0.5s ease;  -->
+ <!-- კომენტარებით ახსენი თითოეული transform ფუნქცია  -->
+<!-- 9) შექმენი ბლოკი, რომელიც თავიდან იქნება დახრილი (skew) და hover-ზე straighten-დება ანუ ბრუნდება საწყის პოზიციაზე. გამოიყენე transform: skew(10deg); და hover-ზე transform: skew(0deg); დაამატე transition, რომ გადახრა ნელა გაქრეს  -->
+<!-- 10) შექმენი პატარა ბარათი, რომელსაც hover-ზე აქვს ერთდროულად რამდენიმე transform. მაგ: scale(1.1), rotate(5deg), translateY(-10px), skew(3deg);  დაამატე transition ყველა თვისებაზე ერთდროულად, კომენტარებით ახსენი რა აკეთებს თითოეული transform ცალ-ცალკე -->
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Transform მაგალითები (უგამოყენებლად translate)</title>
+<style>
+/* 1) transform: skew()  
+   - skew() იხრება ელემენტი X ან Y ღერძზე, ქმნის "დახრილ" ეფექტს */
+.skew-example {
+  width: 150px;
+  height: 100px;
+  background: lightcoral;
+  margin: 20px;
+  transition: transform 0.5s ease; /* გლუვი გადასვლა */
+}
+.skew-example:hover {
+  transform: skew(10deg, 5deg); /* დახრა 10° X ღერძზე და 5° Y ღერძზე */
+}
+
+/* 2) transform-origin  
+   - განსაზღვრავს რომელი წერტილიდან დაიწყოს ტრანსფორმაცია */
+
+/* 3) transition  
+   - transition განსაზღვრავს ცვლილების ხანგრძლივობას და ტიპს */
+
+/* 5) Scale მაგალითი */
+.scale-example {
+  width: 150px;
+  height: 100px;
+  background: lightgreen;
+  margin: 20px;
+  transition: transform 0.6s ease-in-out; /* რბილი გადიდება */
+}
+.scale-example:hover {
+  transform: scale(1.3); /* ელემენტი იზრდება 1.3-ჯერ */
+}
+
+/* 6) Rotate მაგალითი */
+.rotate-example {
+  width: 150px;
+  height: 100px;
+  background: lightskyblue;
+  margin: 20px;
+  transition: transform 0.8s ease;
+  transform-origin: top left; /* ბრუნვა იწყება ზედა მარცხენა კუთხიდან */
+}
+.rotate-example:hover {
+  transform: rotate(45deg); /* ბრუნვა 45°-ით */
+}
+
+/* 7) Transform-origin განსხვავება */
+.origin-center, .origin-top, .origin-bottom {
+  width: 100px;
+  height: 100px;
+  background: lightpink;
+  margin: 20px;
+  display: inline-block;
+  transition: transform 0.6s;
+}
+.origin-center { transform-origin: center; }
+.origin-top { transform-origin: top; }
+.origin-bottom { transform-origin: bottom; }
+
+.origin-center:hover,
+.origin-top:hover,
+.origin-bottom:hover {
+  transform: rotate(20deg);
+}
+/*
+   transform-origin:
+   - center: ბრუნვა ელემენტის ცენტრიდან
+   - top: ბრუნვა ზედა მხრიდან
+   - bottom: ბრუნვა ქვედა მხრიდან
+   სხვადასხვა წერტილი ცვლის ბრუნვის ეფექტის მიმართულებას
+*/
+
+/* 8) "გადაადგილება" მარჯვნივ გარეშე translate-ის */
+.move-skew {
+  width: 120px;
+  height: 100px;
+  background: gold;
+  margin: 20px;
+  transition: all 0.5s ease;
+  display: inline-block;
+}
+.move-skew:hover {
+  /* ელემენტი ოდნავ იხრება (skew) და ვიზუალურად მოძრაობს მარჯვნივ margin-ით */
+  transform: skew(5deg); /* დახრა */
+  margin-left: 120px; /* თითქოს გადაადგილდა მარჯვნივ */
+}
+
+/* 9) Skew გაქრობა */
+.unskew {
+  width: 120px;
+  height: 100px;
+  background: mediumseagreen;
+  margin: 20px;
+  transform: skew(10deg); /* საწყისად დახრილი */
+  transition: transform 0.5s ease;
+}
+.unskew:hover {
+  transform: skew(0deg); /* hover-ზე სწორდება */
+}
+
+/* 10) ბარათი მრავალ Transform-ით */
+.card {
+  width: 180px;
+  height: 120px;
+  background: mediumpurple;
+  color: white;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  border-radius: 10px;
+  transition: all 0.5s ease;
+}
+.card:hover {
+  /*
+    scale(1.1) – ოდნავ იზრდება
+    rotate(5deg) – ოდნავ ტრიალდება
+    skew(3deg) – ოდნავ იხრება
+    margin-top – იწვევს ოდნავ "მაღლა აწევის" ვიზუალურ ეფექტს
+  */
+  transform: scale(1.1) rotate(5deg) skew(3deg);
+  margin-top: 10px;
+}
+</style>
+</head>
+<body>
+
+<h2>1 transform: skew()</h2>
+<div class="skew-example"></div>
+
+<h2>5 Scale (გადიდება)</h2>
+<div class="scale-example"></div>
+
+<h2>6 Rotate (ბრუნვა ზედა მარცხენა კუთხიდან)</h2>
+<div class="rotate-example"></div>
+
+<h2>7 transform-origin განსხვავებული მნიშვნელობებით</h2>
+<div class="origin-center"></div>
+<div class="origin-top"></div>
+<div class="origin-bottom"></div>
+
+<h2>8 Skew + margin გადაადგილება</h2>
+<div class="move-skew"></div>
+
+<h2>9 Skew გაქრობა hover-ზე</h2>
+<div class="unskew"></div>
+
+<h2>10 მრავალ transform-იანი ბარათი</h2>
+<div class="card">Hover Me</div>
+
+</body>
+</html>
