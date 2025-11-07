@@ -1,0 +1,203 @@
+    /*! <!--! 1) ახსენი რისთვის გამოიყენება ანიმაცია. --> */
+    /** ანიმაცია გამოიყენება იმისათვის რათა ჩვენი ვებსაიტი უფრო გავალამაზოთ და მომხმარებელს უფრო დიდიხანი მოუნდე დარჩენა */
+    /*! <!--! 2) ახსენი როგორ უნდა შევქმნათ ანიმაცია --> */
+    /** ანიმაციის შექმნა შეგვიძლია @keyframes - ით და კიდევ */
+    /*? amimation-name ანიმაციის სახელი*/
+    /*? animation-duration გასაზღვრავს რამდენად ნელა შესრულდეს ანიმაცია*/
+    /*? animation-delay რამდენი ხნითთ დააგვიანოს ამ ანიმაციის დაწყება და შესრულება*/
+    /*? animation-iteration-count რამდენჯერ გააგრძელოს ანიმაცია */
+    /*? animation-timing-function რა სისწრაფით დაიწყოს და დასრულლდეს ანიმაცია */
+    /*? animation-direction საით წავიდეს ანიმაცია */
+    /*! <!--! 3) ახსენი რა განსხვავებაა @keyframes-სა და transform-transition-ით შექმნილ ანიმაციას შეორის. --> */
+    /** @keyframse - ს საშუალებით ჩვენ შეგვიძლია გადავაადგილოთ შევანელოთ ავასწრაფოთ ფერი შევუცვალოთ და ა.შ მაგრამ transform:trasition; - ით მხოლოდ შენელება & აჩქარება */
+    /*! <!--! 3) ჩამოთვალე animation-ის ყველა თვისება და მიუწერეთ თითოეულს  თავისი განმარტება (რას აკეთებს) --> */
+    /*? amimation-name ანიმაციის სახელი*/
+    /*? animation-duration გასაზღვრავს რამდენად ნელა შესრულდეს ანიმაცია*/
+    /*? animation-delay რამდენი ხნითთ დააგვიანოს ამ ანიმაციის დაწყება და შესრულება*/
+    /*? animation-iteration-count რამდენჯერ გააგრძელოს ანიმაცია */
+    /*? animation-timing-function რა სისწრაფით დაიწყოს და დასრულლდეს ანიმაცია */
+    /*? animation-direction საით წავიდეს ანიმაცია */
+    /*! <!--! 4) შექმენი ბარათი, რომელიც hover-ზე ბრუნდება --> */
+/* .card{ */
+    /* width: 500px; */
+    /* height: 400px; */
+    /* background-color: red; */
+    /* border-radius: 10px; */
+    /* box-shadow: 5px 5px 5px black; */
+    /* transform: rotate(); */
+
+    /* animation-name: idk; */
+    /* animation-duration: 10s; */
+    /* animation-iteration-count: infinite; */
+/* } */
+/* .card:hover{ */
+    /* rotate: 135deg; */
+    /* transition: 2s all ease; */
+/* } */
+/* @keyframes idk { */
+    /* from{ */
+        /* transform: translateZ(400px); */
+    /* } */
+    /* to{ */
+        /* transform: translateY(350px); */
+    /* } */
+    /* 10%{ */
+        /* background-color: orange; */
+    /* } */
+    /* 20%{ */
+        /* background-color: yellow; */
+    /* } */
+    /* 30%{ */
+        /* background-color: lightgreen; */
+    /* } */
+    /* 40%{ */
+        /* background-color: green; */
+    /* } */
+    /* 50%{ */
+        /* background-color: lightblue; */
+    /* } */
+    /* 60%{ */
+        /* background-color: lightskyblue; */
+    /* } */
+    /* 70%{ */
+        /* background-color: blue; */
+    /* } */
+    /* 80%{ */
+        /* background-color: rgb(255, 115, 255); */
+    /* } */
+    /* 90%{ */
+        /* background-color: blueviolet; */
+    /* } */
+    /* 100%{ */
+        /* background-color: purple; */
+    /* } */
+/* } */
+
+    /*! <!--! 5) შექმენი ელემენტი რომელიც საიტის (Y ღერძზე) იმოძრავებს მუდმივად --> */
+    /* .card2{ */
+        /* width: 500px; */
+        /* height: 400px; */
+        /* background-color: blue; */
+        /* border-radius: 10px; */
+        /* box-shadow: 0px 10px 10px black; */
+/*  */
+        /* animation-name: mm2; */
+        /* animation-duration: 5s; */
+        /* animation-iteration-count: infinite; */
+        /* animation-direction: alternate; */
+    /* } */
+/*  */
+/* @keyframes mm2{ */
+    /* from{ */
+        /* transform: translateY(-400px); */
+    /* } */
+    /* to{ */
+        /* transform: translateY(400px); */
+    /* } */
+/* } */
+    /*! <!--! 6) დაწერე ანიმაცია რომელიც 5 წამში body-ს უცვლის უკანა ფონს სხვადასხვა ფერებით --> */
+/* body{ */
+    /* background-color: aliceblue; */
+/*  */
+        /* animation-name: mml2; */
+        /* animation-duration: 5s; */
+        /* animation-iteration-count: infinite; */
+/* } */
+/* @keyframes mml2 { */
+    /* 10%{ */
+        /* background-color: orange; */
+    /* } */
+    /* 20%{ */
+        /* background-color: yellow; */
+    /* } */
+    /* 30%{ */
+        /* background-color: lightgreen; */
+    /* } */
+    /* 40%{ */
+        /* background-color: green; */
+    /* } */
+    /* 50%{ */
+        /* background-color: lightblue; */
+    /* } */
+    /* 60%{ */
+        /* background-color: lightskyblue; */
+    /* } */
+    /* 70%{ */
+        /* background-color: blue; */
+    /* } */
+    /* 80%{ */
+        /* background-color: rgb(255, 115, 255); */
+    /* } */
+    /* 90%{ */
+        /* background-color: blueviolet; */
+    /* } */
+    /* 100%{ */
+        /* background-color: purple; */
+    /* } */
+/* } */
+
+    /*! <!--! 7) გააკეთე ლამაზი progress ბარი, რომელიც width: 0%-დან ნელა იზრდება width: 100%-მდე. --> */
+/* .card3{ */
+    /* width: 1%; */
+    /* height: 50px; */
+    /* background-color: black; */
+    /* border-radius: 30px; */
+    /*  */
+    /* animation-name: bom; */
+    /* animation-duration: 5s; */
+    /* animation-iteration-count: infinite; */
+/* } */
+/* @keyframes bom { */
+    /* 10%{ */
+        /* width: 10%; */
+    /* } */
+    /* 20%{ */
+        /* width: 20%; */
+    /* } */
+    /* 30%{ */
+        /* width: 30%; */
+    /* } */
+    /* 40%{ */
+        /* width: 40%; */
+    /* } */
+    /* 50%{ */
+        /* width: 50%; */
+    /* } */
+    /* 60%{ */
+        /* width: 60%; */
+    /* } */
+    /* 70%{ */
+        /* width: 70%; */
+    /* } */
+    /* 80%{ */
+        /* width: 80%; */
+    /* } */
+    /* 90%{ */
+        /* width: 90%; */
+    /* } */
+    /* 100%{ */
+        /* width: 100%; */
+    /* } */
+/* } */
+    /*! <!--! 8)ტექსტი უნდა გამოჩნდეს მარცხნიდან ნელა "შემოსრიალებით". --> */
+
+/* .card4{ */
+    /* font-size: larger; */
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif,cursive; */
+    /* font-weight: bolder; */
+    /* font-style: italic; */
+/*  */
+    /* animation-name: bom1; */
+    /* animation-duration: 10s; */
+    /* animation-iteration-count: infinite; */
+/* } */
+/* @keyframes bom1{ */
+    /* from{ */
+        /* position: relative; */
+        /* left: -10%; */
+    /* } */
+    /* to{ */
+        /* position: relative; */
+        /* left: 100%; */
+    /* } */
+/* } */

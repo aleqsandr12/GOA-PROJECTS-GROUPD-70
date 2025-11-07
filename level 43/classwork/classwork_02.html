@@ -1,0 +1,39 @@
+<!--იგივე სამი div გამოიყენე, მაგრამ მეორე div-ს მიეცი:position: relative;
+top: 20px;
+left: 30px;
+დააკვირდი რა მოხდება.
+
+კომენტარებში ახსენი, რომ relative თავის ადგილზე რჩება, უბრალოდ იწევა იმიდან.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin: 10px;
+            display: inline-block;
+        }
+        .box1{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            margin: 10px;
+            display: inline-block;
+            position: relative;
+            top: 20px;
+            left: 30px;
+        }
+    </style>
+    <div class="box"></div>
+    <div class="box1"></div>
+    <div class="box"></div>
+</body>
+</html>

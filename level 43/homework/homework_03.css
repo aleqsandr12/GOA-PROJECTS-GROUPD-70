@@ -1,0 +1,12 @@
+        p.first {
+            font-family: 'Arial', sans-serif;
+            font-size: 16px;
+        }
+        p.second {
+            font-family: 'Times New Roman', serif;
+            font-size: 20px;
+        }
+        p.third {
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+        }

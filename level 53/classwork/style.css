@@ -1,0 +1,83 @@
+/*! 1) ჩამოწერეთ და ახსენით თითოეული საზომი ერთეული (კომენტარებით) */
+/* ? vh,vw ეკრანის ზომაზე დამოკიდებულებაში*/
+/* ? % მშობელ ელემენტზე დამოკიდებულებაში */
+/* ?en,em ტექსტის ზომის დამოკიდებულებაში*/
+/*! 2) შექმენი სამი კვადრატი (100×100px), რომლებიც ნაწილობრივ ერთმანეთს ფარავენ. დაალაგე ისე, რომ საშუალონაები (middle) იყოს ზედა, შემდეგ — გამარჯვე (right) და ბოლოს — მარცხნე (left). */
+
+.box1 {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: absolute;
+  left: 100px;
+  top: 100px;
+  z-index: 1;
+}
+
+.box2 {
+  width: 100px;
+  height: 100px;
+  background-color: yellow;
+  position: absolute;
+  left: 150px;
+  top: 100px;
+  z-index: 2;
+}
+
+.box3 {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  position: absolute;
+  left: 50px;
+  top: 100px;
+  z-index: 0;
+}
+
+/*! 3) შექმენი ბლოკი, რომელიც უჭერს 80% ფართის კონტეინერისა და მინიმუმ min-width: 300px; შემდეგ შექმენი ნახევარი ეკრანის სიმაღლე height: 50vh. */
+.block-3 {
+  width: 80%;
+  min-width: 300px;
+  height: 50vh;
+  background-color: lightgray;
+  margin: 20px auto;
+}
+/*! 4) შექმენი ჰორიზონტალური ბარი 600×80px, რომელიც გადადის: წითელი → ყვითელი (ჩვეულებრივი) → გამჭოლი (transparent) დაახლოებით 60% წერტილამდე */
+.bar-4 {
+  width: 600px;
+  height: 80px;
+  background: linear-gradient(to right, red, yellow 60%);
+  margin: 20px auto;
+}
+/*! 5) გააკეთე დივი 200px სიმაღლით. */
+/*! მიანიჭე ფონი: ფერი გადავიდეს ლურჯიდან თეთრამდე. */
+/*! ბატონი გიგა კოჩალიძე — 4:33 PM */
+.div-5 {
+  height: 200px;
+  background: linear-gradient(to bottom, blue, white);
+  margin: 20px auto;
+}
+
+/*! 6) შექმენი ერთი დივი (200px × 200px). */
+/*! გააკეთე ფონი, რომელიც ცენტრიდან თეთრია და გარედან ლურჯი. */
+.div-6 {
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(white, blue);
+  margin: 20px auto;
+}
+
+/*! 7) შექმენი დივი, რომელსაც ნაგულისხმევად აქვს ლურჯი ფონი. */
+/*! თუ ეკრანის სიგანე 600px-ზე ნაკლებია — ფონი გახდეს წითელი. */
+.div-7 {
+  width: 200px;
+  height: 200px;
+  background-color: blue;
+  margin: 20px auto;
+}
+
+@media (max-width: 600px) {
+  .div-7 {
+    background-color: red;
+  }
+}

@@ -1,0 +1,38 @@
+.conteiner{
+    width: 500px;
+    height: 500px;
+    background-color: red;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px black;
+
+    animation-name: idk;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+@keyframes idk{
+    from{
+        transform: translateX(100px);
+    }
+    to{
+        transform: translateY(100px) scale(2);
+    }
+
+    20%{
+        background-color: red;
+    }
+    40%{
+        background-color: yellow;
+    }
+    60%{
+        background-color: green;
+    }
+    80%{
+        background-color: blue;
+    }
+    from{
+        transform: translateX(300px);
+    }
+    to{
+        transform: translateY(200px);
+    }
+}

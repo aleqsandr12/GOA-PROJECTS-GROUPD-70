@@ -1,0 +1,12 @@
+.firstcw{
+    width: 25px;
+    height: 25px;
+    background-color: red;
+}
+.box{
+    display: flex;
+    width: 25px;
+    height: 25px;
+    align-items: center;
+    background-color: blue;
+}

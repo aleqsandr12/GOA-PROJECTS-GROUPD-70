@@ -1,0 +1,41 @@
+<!--შექმენი სამი div.
+
+ერთ-ერთს მიეცი:position: absolute;
+top: 0;
+left: 0;
+დააკვირდი, როგორ გადადის ეკრანის ზედა კუთხეში და აღარ ითვალისწინებს სხვებს.
+
+ახსენი რატომ (absolute მიყვება body-ს ან უახლოეს relative parent-ს)-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin: 10px;
+            display: inline-block;
+        }
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            margin: 10px;
+            display: inline-block;
+            position: absolute; /* Positioned relative to the nearest positioned ancestor (if any); otherwise, relative to the initial containing block (viewport) */
+            top: 0; /* Moves the element to the top of its containing block */
+            left: 0; /* Moves the element to the left of its containing block */
+        }
+    </style>
+    <div class="box"></div>
+    <div class="box2"></div>
+    <div class="box"></div>
+</body>
+</html>

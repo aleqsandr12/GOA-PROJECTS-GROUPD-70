@@ -1,0 +1,7 @@
+.container{
+    position: static;
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    align-items: center;
+}

@@ -1,0 +1,43 @@
+        p{
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+        }
+        .text1{
+            font-family: 'Times New Roman', serif;
+            font-size: 18px;
+        }
+        .text2{
+            font-family: 'Courier New', monospace;
+            font-size: 20px;
+        }
+        h1, h2 {
+            font-size: 24px; /* Grouping selectors to apply the same font size */
+        }
+        h1 {
+            font-weight: bold; /* Making h1 bold */
+        }
+        h2 {
+            font-style: italic; /* Making h2 italic */
+            font-weight: 400; /* Normal weight */
+        }
+        .highlight {
+            color: red; /* Highlight class to change text color to red */
+        }
+        .large-text {
+            font-size: 22px; /* Class to increase font size */
+        }
+        .small-text {
+            font-size: 14px; /* Class to decrease font size */
+        }
+        .bold-text {
+            font-weight: bold; /* Class to make text bold */
+        }
+        .italic-text {
+            font-style: italic; /* Class to make text italic */
+        }
+        .underline-text {
+            text-decoration: underline; /* Class to underline text */
+        }
+        .blue-text {
+            color: blue; /* Class to change text color to blue */
+        }
