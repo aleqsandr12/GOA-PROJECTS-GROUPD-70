@@ -1,0 +1,109 @@
+/* style.css
+    მაგალითები CSS Grid-ის სხვადასხვა თვისებების რისთვის და როგორ მუშაობის დასანახად.
+    სამუშაობს ერთად HTML-ელემენტებთან: რამდენიმე კონტეინერი ქვემოთ (მაგ. <div class="grid align-start"> ...).
+*/
+
+/* საერთო სტილი ყუთებისთვის */
+.grid-item {
+  background: #4a90e2;
+  color: #fff;
+  padding: 12px;
+  border-radius: 6px;
+  font-family: system-ui, sans-serif;
+}
+
+/* 1) 2 სვეტიანი გრიდი + სხვადასხვა სიმაღლეები.
+    იფუნქციონირებს ისე, რომ ადვილად ხედავ align-items შედეგს.
+    HTML: <div class="grid align-start"> <div class="grid-item" style="height:70px">...</div> ... </div>
+*/
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 სვეტი */
+  gap: 12px;
+}
+
+/* ვერტიკალური ალიგნმენტი თითოეულ ნივთზე (მართავს იმას, როგორ არის ნივთი შეფუთული თავის grid area-ში) */
+.align-start { align-items: start; }   /* თითოეული ნივთი მიინათების ზედა ნაწილზე */
+.align-center { align-items: center; } /* თითოეული ნივთი განთავსებულია შესაბამისი სკვერის ცენტრში */
+.align-end { align-items: end; }       /* თითოეული ნივთი მიინიჭება ქვედა ნაწილზე */
+
+/* მცირე მაგალითისთვის სხვადასხვა სიმაღლის ყუთები (არა აუცილებელია, მხოლოდ ვიზუალური) */
+.tall { height: 140px; }
+.medium { height: 90px; }
+.short { height: 50px; }
+
+/* 2) 2 სვეტიანი გრიდი + justify-items (ჰორიზონტალური ალიგნმენტი თითოეულ ნივთზე) */
+/* HTML: <div class="grid justify-center"> ... </div> */
+.justify-start { justify-items: start; }     /* ნივთის შიგნით კონტენტი მარცხნივ */
+.justify-center { justify-items: center; }   /* ცენტრში */
+.justify-end { justify-items: end; }         /* მარჯვნივ */
+.justify-stretch { justify-items: stretch; } /* ნივთები განსაზღვრულ სვეტს აფართოებს ჰორიზონტალურად */
+
+/* 3) gap, row-gap, column-gap მაგალითები */
+/* gap — ორივე განზომილებაში, row-gap და column-gap — ცალკე მართვა */
+.gap-small { gap: 8px; }
+.gap-medium { gap: 20px; }
+.gap-rows { row-gap: 24px; column-gap: 8px; }
+
+/* 4) კონტეინერი მაღალია და ყუთები პატარა:
+    align-content და justify-content მართავს მთლიან ჯგუფს (ერთი სერიების ბლოკს) არა ინდივიდუალურად.
+    HTML: <div class="grid content-demo content-start"> ... </div>
+*/
+.content-demo {
+  display: grid;
+  grid-template-columns: repeat(2, 120px);
+  grid-auto-rows: 40px; /* ყუთები პატარა */
+  gap: 10px;
+  height: 320px;        /* საკმარისად მაღალი კონტეინერი, რომ ჩანს ჯგუფის გადაადგილება */
+  background: #f3f4f6;
+  padding: 12px;
+}
+
+/* მასწავლის ღირებულებები */
+.content-start { align-content: start; }         /* მთელი ნივთების ბლოკი მიდის კონტეინერის ზედა ნაწილზე */
+.content-center { align-content: center; }       /* ბლოკი ჩამოყალიბდება ცენტრში ვერტიკალურად */
+.content-end { align-content: end; }             /* ქვედა მხარეს */
+.content-space-between { align-content: space-between; } /* ბლოკის შემადგენელი რიგები "იგრებენ" ზედა და ქვედა კიდეს */
+.content-space-around { align-content: space-around; }   /* შორის სივრცე თანაბრად ხმის, კიდეებსაც აქვს ნახევარი სივრცე */
+.content-space-evenly { align-content: space-evenly; }   /* ყველა فاصله თანაბარია (წვერებს შორის და კიდეებზეც) */
+
+/* justify-content - ჰორიზონტალური მიმართულების ანალოგი */
+.justify-content-start { justify-content: start; }
+.justify-content-center { justify-content: center; }
+.justify-content-end { justify-content: end; }
+.justify-content-space-between { justify-content: space-between; }
+.justify-content-space-around { justify-content: space-around; }
+.justify-content-space-evenly { justify-content: space-evenly; }
+
+/* 5) div.container — 2 სვეტი და 2 რიგი, 4 შიდა ყუთი სხვადასხვა ფერით და მცირე gap */
+/* HTML:
+    <div class="container">
+      <div class="c1">1</div>
+      <div class="c2">2</div>
+      <div class="c3">3</div>
+      <div class="c4">4</div>
+    </div>
+*/
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 140px);
+  gap: 8px;
+  width: 360px; /* მხოლოდ დემოსთვის, საჭირო არ არის ყოველთვის */
+}
+
+/* ოთხივე ყუთის ინდივიდუალური ფერები */
+.container .c1 { background: #ff6b6b; color:#fff; display:flex; align-items:center; justify-content:center; font-weight:600; }
+.container .c2 { background: #f7b267; color:#000; display:flex; align-items:center; justify-content:center; font-weight:600; }
+.container .c3 { background: #6bcf97; color:#000; display:flex; align-items:center; justify-content:center; font-weight:600; }
+.container .c4 { background: #6b8cff; color:#fff; display:flex; align-items:center; justify-content:center; font-weight:600; }
+
+/* 6) განმარტებები (კომენტარებში): */
+
+/* Start  - იწყება კონტეინერის საწყისი ხაზიდან (top ან left, დამოკიდებულია მიმართულებაზე). */
+/* End    - გადასაგდებს ნივთს კონტეინერის ბოლოში (bottom ან right). */
+/* Center - განთავსება ცენტრში (სამწუხაროდ არ აფართოვებს). */
+/* Space-between - რომანტიკულად განაწილებული: პირველ და ბოლო ელემენტი მიყრდნობა კიდეებს, დანარჩენი თანაბრად შორის. */
+/* Space-around - თითო ელემენტს აქვს თანაბარი 'padding' იმ სივრციდან; კიდეთა ელემენტებს აქვს ნახევარი სივრცე გარეთ. */
+/* Space-evenly - ყველა შიდა ნახშირბადი თანაბარი ფাঁრკლი აქვს (შიდა და კიდის შორისაც ერთი და იგივე). */
+/* Stretch - (justify-items/stretch ან align-items/stretch) ნივთები აფართოვებენ თავის grid area-ს სრულად სვეტის/რიგის მიმართულებით. */

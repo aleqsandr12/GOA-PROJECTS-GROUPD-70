@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="style.css">
+    <title>Grid - ის მუშაობა</title>
+</head>
+<body>
+
+    <h2>1) display: grid - მაგალითი (3 სვეტი x 3 რიგი)</h2>
+    <p class="note">display: grid ქმნის ორ მიმართულების ლეიკას (rows და columns). ელემენტები განლაგებულია გრიდ-სისტემაში.</p>
+    <div class="grid grid-3x3">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+        <div class="box">9</div>
+    </div>
+
+    <h2>2) 4 სვეტი — 8 ყუთი, ზოგი გაერთიანებული (grid-column: span)</h2>
+    <div class="grid grid-4cols">
+        <div class="box">A (span 2x2)</div>
+        <div class="box">B</div>
+        <div class="box">C</div>
+        <div class="box">D</div>
+        <div class="box">E</div>
+        <div class="box">F</div>
+        <div class="box">G</div>
+        <div class="box">H</div>
+    </div>
+
+    <h2>3) 2 სვეტი x 4 რიგი — პირველი ყუთი მაღალი, გამოიყენეთ align-items</h2>
+    <p class="note">align-items კონტროლირებს ნივთების ვერტიკალურ განლაგებას გრიდ-კონტეინერში.</p>
+    <div class="grid grid-2x4">
+        <div class="box">Tall item (row-span)</div>
+        <div class="box">Normal</div>
+        <div class="box">Item 3</div>
+        <div class="box">Item 4</div>
+        <div class="box">Item 5</div>
+        <div class="box">Item 6</div>
+        <div class="box">Item 7</div>
+        <div class="box">Item 8</div>
+    </div>
+
+    <h2>5) შექმენით 2 სვეტიანი გრიდი — ტექსტით ყუთები და justify-items</h2>
+    <p class="note">justify-items განსაზღვრავს როგორ დამდგება ასო/შიგთავსი ჰორიზონტალურად გრიდ- ყუთების შიგნით (კონტეინერის დონეზე).</p>
+
+    <div class="example-row">
+        <div class="justify-demo justify-start">
+            <h3>justify-items: start</h3>
+            <div class="grid grid-2cols">
+                <div class="box">START</div>
+                <div class="box">START</div>
+            </div>
+        </div>
+
+        <div class="justify-demo justify-center">
+            <h3>justify-items: center</h3>
+            <div class="grid grid-2cols">
+                <div class="box">CENTER</div>
+                <div class="box">CENTER</div>
+            </div>
+        </div>
+
+        <div class="justify-demo justify-end">
+            <h3>justify-items: end</h3>
+            <div class="grid grid-2cols">
+                <div class="box">END</div>
+                <div class="box">END</div>
+            </div>
+        </div>
+
+        <div class="justify-demo justify-stretch">
+            <h3>justify-items: stretch</h3>
+            <div class="grid grid-2cols">
+                <div class="box">STRETCH</div>
+                <div class="box">STRETCH</div>
+            </div>
+        </div>
+    </div>
+
+    <h2>6) მოკლე ახსნა: start, end, center, space-between, space-around, space-evenly, stretch, justify-items, align-items</h2>
+    <ul>
+        <li><strong>start</strong> — ელემენტები იწყება კონტეინერის დასაწყისიდან (left ან top, მიმართულების მიხედვით).</li>
+        <li><strong>end</strong> — ელემენტები გაიმართება კონტეინერის ბოლოში.</li>
+        <li><strong>center</strong> — ელემენტები იქნება ცენტრში (ჰორიზონტალურად ან ვერტიკალურად).</li>
+        <li><strong>space-between</strong> — რიცხობრივი განაწილება: პირველსა და უკანასკნელს უკანა სივრცე არ აქვს; დატვირთვა შორის ისე ნაწილდება.</li>
+        <li><strong>space-around</strong> — ყველა ელემენტს აქვს თანაბარი "თავის" და "უკანა" სივრცე (საშუალო სივრცე ორჯერ მეტი იყოს).</li>
+        <li><strong>space-evenly</strong> — ყველა სივრცე (ერთმანეთს შორის და კიდეების წინ/კი) თანაბარია.</li>
+        <li><strong>stretch</strong> — ელემენტები იშლება/გავრცობა დაკავებული ტრეკის ზომამდე (ქრეფულად ან ვერტიკალურად, თუ დაშვებულია).</li>
+        <li><strong>justify-items</strong> — კონტეინერის დონეზე მართავს შიგთავსის ჰორიზონტალურ გადაწყვეტილებას თითო "გრიდ-ცელაში".</li>
+        <li><strong>align-items</strong> — კონტეინერის დონეზე მართავს შიგთავსის ვერტიკალურ პოზიციონირებას თითო "გრიდ-ცელაში".</li>
+    </ul>
+
+</body>
+</html>

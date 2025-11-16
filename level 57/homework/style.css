@@ -1,0 +1,217 @@
+/* 1) კომენტარების სახით ახსენით რა არის და რისთვის გამოიყენება ფსევდო კლასები.
+2) ახსენი რას აკეთებს :hover().
+3) შექმენი ღილაკი რომელიც კარგად იქნება გასტილული. შემდეგ როცა მომხმარებელი მაუსს მიიტანს მასზე შეეცვალოს ფონი და გახდეს წითელი.
+4) შექმენი დივი, რომლიც ოდნავ იქნება გასტილული, შემდეგ როცა მაუსს მიიტანს მომხმარებელი ეს დივი ამოტრიალდეს, გაიზარდოს ზომაში და კუთხეები მომრგვალდეს.
+5) შექმენი დივი რომელზეც გექნებათ ანიმაცია: როცა მომხმარებელი მაუსს მიიტანს დივზე, 0%-ზე იყოს პატარა, 50% გაიზარდოს 2 ჯერ და 100% გაიზარდოს 3ჯერ.
+ 
+6) ახსენით რას აკეთებს :active()
+7) შექმენი ღილაკი რომელიც ჯერ იზრდება hover-ით 2 ჯერ და შემდეგ როცა მომხმარებელი დააწკაპებს ღილაკს 0.5 წამში პატარავდება.
+8) 4) შექმენი ბლოკი, რომელიც active მდგომარეობაში 0.2 წამით ოდნავ ბრუნდება (მაგ: რამდენიმე გრადუსით მარჯვნივ), ხოლო შემდეგ ბრუნდება საწყის პოზიციაზე.
+9) შექმენი ღილაკი, რომელსაც active მომენტში ფონური ფერი საიმედოდ ბნელდება და ტექსტი ოდნავ ჩამოდის ქვემოთ. ეფექტი უნდა გაგრძელდეს მხოლოდ დაჭერის განმავლობაში.
+ 
+10) ახსენით რას აკეთებს :focus()
+11) შექმენი input ველი, რომელიც focus მდგომარეობაში ოდნავ გადიდდება და იღებს რბილ ჩრდილს, რათა აშკარად გამოჩნდეს რომ მომხმარებელი სწორედ ამ ველში წერს.
+12) შექმენი textarea, რომელსაც focus-ზე ფონის ფერი ოდნავ უბზინდება (მაგ: უფრო ღია ტონი), ხოლო ტექსტის ჩარჩო ხდება უფრო მკვეთრი.
+
+13) ახსენი რას აკეთებს checked
+14) შექმენი checkbox, რომლის ჩართვისას გვერდზე გამოჩნდება პატარა ტექსტი ("თქვენ მონიშნეთ"). გამორთვისას ტექსტი უნდა დაიმალოს.
+15) ახსენი რას აკეთებს  :valid / :invalid
+16) შექმენი email input, რომელიც :valid მდგომარეობაში მიიღებს მწვანე ჩარჩოს, ხოლო :invalid მდგომარეობაში — წითელ ჩარჩოს.
+17) შექმენი password input, minlength მოთხოვნის შესრულებაზე :valid-ისას background ფერი გახდეს მსუბუქი მწვანე, ხოლო :invalid-ისას — მსუბუქი წითელი.
+
+18) ახსენი რას აკეთებს :target
+19) შექმენი გვერდზე რამდენიმე სექცია. როდესაც მომხმარებელი დააწკაპებს შესაბამის ბმულს, მხოლოდ ის სექცია იქნება გამოჩენილი, დანარჩენები დამალული (:target-ით).
+
+20) ახსენი რას აკეთებს :is
+21) შექმენი სამი ელემენტი (h1, h2, h3). ერთი selector-ის გამოყენებით გამოიყენე საერთო ფერი, padding და border-radius :is()–ის დახმარებით. */
+
+
+/* 1) ფსევდო კლასები - CSS-ის სპეციალური სელექტორები, რომლებიც ელემენტის გარკვეულ მდგომარეობას აღნიშნავენ (hover, focus, active და ა.შ.). */
+
+/* 2) :hover() - აკტივდება როდესაც მომხმარებელი მაუსს ელემენტზე ამოტანს */
+
+/* 3) */
+.button {
+    padding: 12px 24px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.button:hover {
+    background-color: red;
+}
+
+/* 4) */
+.div-rotate {
+    width: 100px;
+    height: 100px;
+    background-color: #4CAF50;
+    border-radius: 5px;
+    margin: 20px;
+}
+
+.div-rotate:hover {
+    transform: rotate(10deg) scale(1.2);
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+/* 5) */
+.div-animate {
+    width: 100px;
+    height: 100px;
+    background-color: #FF9800;
+    margin: 20px;
+}
+
+.div-animate:hover {
+    animation: scaleAnimation 1s ease;
+}
+
+@keyframes scaleAnimation {
+    0% { transform: scale(1); }
+    50% { transform: scale(2); }
+    100% { transform: scale(3); }
+}
+
+/* 6) :active() - აკტივდება როდესაც ელემენტს დაწკაპებენ/დაჭერენ */
+
+/* 7) */
+.button-grow {
+    padding: 12px 24px;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.button-grow:hover {
+    transform: scale(2);
+}
+
+.button-grow:active {
+    transform: scale(1);
+    transition: 0.5s;
+}
+
+/* 8) */
+.block-rotate {
+    width: 100px;
+    height: 100px;
+    background-color: #9C27B0;
+    margin: 20px;
+}
+
+.block-rotate:active {
+    animation: rotateActive 0.2s ease;
+}
+
+@keyframes rotateActive {
+    0%, 100% { transform: rotate(0deg); }
+    50% { transform: rotate(5deg); }
+}
+
+/* 9) */
+.button-press {
+    padding: 12px 24px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.button-press:active {
+    background-color: #1a4d1a;
+    transform: translateY(3px);
+}
+
+/* 10) :focus() - აკტივდება როდესაც ელემენტი აქტიური/ფოკუსირებული იქნება */
+
+/* 11) */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    padding: 8px;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+    transition: 0.3s;
+}
+
+/* 12) */
+textarea:focus {
+    background-color: #f0f8ff;
+    border: 2px solid #333;
+    outline: none;
+    transition: 0.3s;
+}
+
+/* 13) :checked - აკტივდება როდესაც checkbox ან radio ელემენტი არის ჩართული */
+
+/* 14) */
+#checkbox-input {
+    display: none;
+}
+
+#checkbox-text {
+    display: none;
+}
+
+#checkbox-input:checked ~ #checkbox-text {
+    display: block;
+    color: green;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* 15) :valid/:invalid - აკტივდება ფორმის ელემენტის მნიშვნელობის მართებულობის მიხედვით */
+
+/* 16) */
+input[type="email"]:valid {
+    border: 2px solid green;
+}
+
+input[type="email"]:invalid {
+    border: 2px solid red;
+}
+
+/* 17) */
+input[type="password"]:valid {
+    background-color: #c8e6c9;
+}
+
+input[type="password"]:invalid {
+    background-color: #ffcdd2;
+}
+
+/* 18) :target - აკტივდება როდესაც URL-ის hash ელემენტის id-ს თან ემთხვევა */
+
+/* 19) */
+section {
+    display: none;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+section:target {
+    display: block;
+}
+
+/* 20) :is() - აერთიანებს რამდენიმე სელექტორს და აკუმბენ წესებს */
+
+/* 21) */
+:is(h1, h2, h3) {
+    color: #333;
+    padding: 15px;
+    border-radius: 8px;
+}

@@ -1,0 +1,83 @@
+/* 1) ახსენი display: grid;
+2) შექმენით div.container.
+გამოიყენეთ display: grid.
+3 სვეტი და 3 რიგი.
+დაამატეთ 9 ყუთი სხვადასხვა ფერით.
+ცოტა სივრცე ყუთებს შორის (gap).
+3) შექმენით გრიდი 4 სვეტით.
+შიგნით მოათავსეთ 8 ყუთი, ზოგი დიდი, ზოგი პატარა.
+გამოიყენეთ grid-column: span რომ რამდენიმე ყუთი სვეტებს გაერთიანდეს.
+დაამატეთ მცირე სივრცე.
+4) შექმენით გრიდი 2 სვეტით, 4 რიგით.
+პირველი ყუთი იყოს მაღალი, მეორე ნორმალური.
+გამოიყენეთ align-items რომ ყუთები ვერტიკალურად სწორად განლაგდეს.
+5) შექმენით 2 სვეტიანი გრიდი.
+შიგნით მოათავსეთ ტექსტით ყუთები.
+გამოიყენეთ justify-items რომ ტექსტი ჰორიზონტალურად დადგეს.
+6) ასევე ახსენით თითოეული: Start end center space-between space-around space-ev enly strech justify-item align-items
+
+7) ასევე ითამაშეთ ეს თამაშები: 
+https://cssgridgarden.com/
+და
+https://flexboxfroggy.com/ */
+ body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; padding: 20px; line-height: 1.4; }
+        h2 { margin-top: 36px; font-size: 18px; }
+        .grid { display: grid; gap: 10px; margin: 16px 0 32px; }
+        .box {
+            padding: 8px;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 60px;
+            border-radius: 6px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        /* 1) 3x3 grid */
+        .grid-3x3 { grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(3, 100px); }
+        .grid-3x3 .box:nth-child(1){ background:#e74c3c } 
+        .grid-3x3 .box:nth-child(2){ background:#e67e22 } 
+        .grid-3x3 .box:nth-child(3){ background:#f1c40f; color:#222 } 
+        .grid-3x3 .box:nth-child(4){ background:#2ecc71 } 
+        .grid-3x3 .box:nth-child(5){ background:#1abc9c } 
+        .grid-3x3 .box:nth-child(6){ background:#3498db } 
+        .grid-3x3 .box:nth-child(7){ background:#9b59b6 } 
+        .grid-3x3 .box:nth-child(8){ background:#34495e } 
+        .grid-3x3 .box:nth-child(9){ background:#7f8c8d }
+
+        /* 2) 4-column grid with spanning items */
+        .grid-4cols { grid-template-columns: repeat(4, 1fr); grid-auto-rows: 100px; }
+        .grid-4cols .box { background: #6c5ce7; }
+        .grid-4cols .box:nth-child(1){ grid-column: span 2; grid-row: span 2; background:#0984e3; }
+        .grid-4cols .box:nth-child(2){ background:#00b894; }
+        .grid-4cols .box:nth-child(3){ background:#fd79a8; }
+        .grid-4cols .box:nth-child(4){ background:#e17055; }
+        .grid-4cols .box:nth-child(5){ background:#fdcb6e; color:#222; }
+        .grid-4cols .box:nth-child(6){ background:#00cec9; }
+        .grid-4cols .box:nth-child(7){ background:#d63031; }
+        .grid-4cols .box:nth-child(8){ background:#2d3436; }
+
+        /* 3) 2 columns x 4 rows, first box tall; use align-items */
+        .grid-2x4 { grid-template-columns: 1fr 1fr; grid-auto-rows: 80px; align-items: center; }
+        .grid-2x4 .box:first-child { grid-row: span 2; background:#6ab04c; min-height: 160px; }
+        .grid-2x4 .box{ background:#30336b; }
+
+        /* 4/5) Multiple examples with justify-items (container-level horizontal alignment) */
+        .example-row { display:flex; gap:12px; flex-wrap:wrap; align-items:flex-start; }
+        .justify-demo { width:320px; border:1px solid #ddd; padding:12px; border-radius:8px; }
+        .justify-demo h3 { margin:0 0 8px; font-size:14px; }
+        .justify-demo .grid-2cols { grid-template-columns: 1fr 1fr; grid-auto-rows: 80px; }
+        .justify-start    .grid-2cols { justify-items: start; }
+        .justify-center   .grid-2cols { justify-items: center; }
+        .justify-end      .grid-2cols { justify-items: end; }
+        .justify-stretch  .grid-2cols { justify-items: stretch; }
+        .justify-demo .box { background:#2f3640; }
+
+        /* small visuals for flex-based examples for "space-*" */
+        .flex-space { display:flex; gap:8px; border:1px dashed #ccc; padding:8px; margin-bottom:8px; height:60px; align-items:center; }
+        .flex-space .pill { background:#0984e3; color:#fff; padding:6px 10px; border-radius:999px; font-weight:600; }
+
+        /* utility */
+        .note { font-size:13px; color:#333; background:#f7f7f7; padding:8px; border-radius:6px; }

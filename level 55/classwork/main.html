@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Grid მაგალითები</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>CSS Grid მაგალითები</h1>
+
+  <!-- 1) align-items მაგალითები -->
+  <h2>1. align-items (ვერტიკალური გასწორება)</h2>
+  <div class="grid align-start">
+    <div class="grid-item tall">Tall</div>
+    <div class="grid-item short">Short</div>
+    <div class="grid-item medium">Medium</div>
+    <div class="grid-item short">Short</div>
+  </div>
+
+  <div class="grid align-center" style="margin-top:20px;">
+    <div class="grid-item tall">Tall</div>
+    <div class="grid-item short">Short</div>
+    <div class="grid-item medium">Medium</div>
+    <div class="grid-item short">Short</div>
+  </div>
+
+  <div class="grid align-end" style="margin-top:20px;">
+    <div class="grid-item tall">Tall</div>
+    <div class="grid-item short">Short</div>
+    <div class="grid-item medium">Medium</div>
+    <div class="grid-item short">Short</div>
+  </div>
+
+
+  <!-- 2) justify-items მაგალითები -->
+  <h2>2. justify-items (ჰორიზონტალური გასწორება)</h2>
+  <div class="grid justify-start">
+    <div class="grid-item">Start</div>
+    <div class="grid-item">Start</div>
+  </div>
+
+  <div class="grid justify-center" style="margin-top:20px;">
+    <div class="grid-item">Center</div>
+    <div class="grid-item">Center</div>
+  </div>
+
+  <div class="grid justify-end" style="margin-top:20px;">
+    <div class="grid-item">End</div>
+    <div class="grid-item">End</div>
+  </div>
+
+  <div class="grid justify-stretch" style="margin-top:20px;">
+    <div class="grid-item">Stretch</div>
+    <div class="grid-item">Stretch</div>
+  </div>
+
+
+  <!-- 3) gap მაგალითები -->
+  <h2>3. gap (სივრცე ყუთებს შორის)</h2>
+  <div class="grid gap-small">
+    <div class="grid-item">Small gap</div>
+    <div class="grid-item">Small gap</div>
+  </div>
+
+  <div class="grid gap-medium" style="margin-top:20px;">
+    <div class="grid-item">Medium gap</div>
+    <div class="grid-item">Medium gap</div>
+  </div>
+
+  <div class="grid gap-rows" style="margin-top:20px;">
+    <div class="grid-item">Row-gap 24px</div>
+    <div class="grid-item">Column-gap 8px</div>
+    <div class="grid-item">Row-gap 24px</div>
+    <div class="grid-item">Column-gap 8px</div>
+  </div>
+
+
+  <!-- 4) align-content / justify-content მაგალითები -->
+  <h2>4. align-content / justify-content</h2>
+  <div class="content-demo content-space-between">
+    <div class="grid-item">1</div>
+    <div class="grid-item">2</div>
+    <div class="grid-item">3</div>
+    <div class="grid-item">4</div>
+    <div class="grid-item">5</div>
+    <div class="grid-item">6</div>
+  </div>
+
+
+  <!-- 5) container მაგალითი (4 ფერადი ყუთი) -->
+  <h2>5. 2x2 Container</h2>
+  <div class="container">
+    <div class="c1">1</div>
+    <div class="c2">2</div>
+    <div class="c3">3</div>
+    <div class="c4">4</div>
+  </div>
+
+</body>
+</html>
