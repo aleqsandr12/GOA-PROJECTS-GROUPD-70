@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+/* 1) Smart Message Box */
+#messageBox {
+    padding: 15px;
+    border: 2px solid #333;
+    width: 250px;
+    margin-bottom: 10px;
+}
+
+.activeMessage {
+    background-color: teal;
+    color: white;
+}
+
+/* 2) Color Hover Panel */
+.panel {
+    width: 200px;
+    height: 100px;
+    background-color: lightgray;
+    margin: 20px 0;
+}
+
+/* 5) Show / Hide Info */
+.hidden {
+    display: none;
+}

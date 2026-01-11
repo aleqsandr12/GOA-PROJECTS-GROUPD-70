@@ -1,0 +1,88 @@
+/* 1) კომენტარების სახით ახსენი absolute და relative 
+
+position-ები.
+absolute: ელემენტი განთავსდება ყველაზე ახლო position: relative მქონე მშობ
+ელზე. თუ მშობელი არ აქვს position: relative, ელემენტი განთავსდება body-ზე.
+relative: ელემენტი ინარჩუნებს თავის ადგილს დოკუმენტში, მაგრამ შეგიძლს გადაადგილდეს top, right, bottom, left მეშვეობით./*
+/*2) კომენტარების სახით ახსენი flex-grow, და flex-shrink.
+
+flex-grow: განსაზღვრავს რამდენად გაიზრდება ელემენტი თავისუფალი სივრცის მიხედვით კონტეინერში. რაც უფრო მაღალია მნიშვნელობა, მით უფრო მეტ ადგილს დაიკავებს.
+flex-shrink: განსაზღვრავს რამდენად იკლებს ელემენტი ზომას, როცა კონტეინერში ადგილის ნაკლებობაა. რაც უფრო მაღალია მნიშვნელობა, მით უფრო მეტად იკლებს ელემენტი ზომას.*/
+/*
+3) შექმენი ერთი ბლოკი (div)
+მიეცი ზომები (width, height)
+გამოიყენე position: relative  
+გადაადგილე ელემენტი top ან left ელემენტით კომრნტარებით  ახსენი, თუ როგორ ინარჩუნებს ელემენტი თავის ადგილს*/
+
+.container {
+    width: 200px;
+    height: 200px;
+    background-color: lightblue;
+    position: relative;
+    top: 20px; /* ელემენტი გადაადგილდება ქვემოთ 20 პიქსელით, მაგრამ ინარჩუნებს თავის ადგილს დოკუმენტში */
+    left: 30px; /* ელემენტი გადაადგილდება მარჯვნივ 30 პიქსელით 
+*/  
+}
+/* 4) შექმენი parent ელემენტი და შიგნით child ელემენტი
+parent-ს დაუსვი position: relative
+child-ს დაუსვი position: absolute
+top და left მეშვეობით child ზუსტად parent-ის შიგნით განათავსე */
+.parent {
+    width: 300px;
+    height: 300px;
+    background-color: lightgreen;
+    position: relative;
+}
+.child {
+    width: 100px;
+    height: 100px;
+    background-color: coral;
+    position: absolute;
+    top: 50px; /* child ელემენტი განათავსე parent-ის შიგნით 50 პიქსელით ქვემოთ */
+    left: 70px; /* child ელემენტი განათავსე parent-ის შიგნით 70 პიქსელით მარჯვნივ */
+}
+
+/* 5) შექმენი კონტეინერი display: flex-ით
+შიგნით სამი ელემენტი განათავსე
+თითოეულს დაუსვი განსხვავებული flex-grow მნიშვნელობა
+(მაგ. 1, 2, 3)
+აჩვენე როგორ იზრდება ელემენტები თავისუფალი სივრცის მიხედვით. */
+
+.flex-container {
+    display: flex;
+    width: 600px;
+    height: 100px;
+    background-color: lightgray;
+}
+/*6) შექმენი ვიწრო კონტეინერი (მაგ. width: 200px)
+მოათავსე სამი ელემენტი flex-ში
+თითოეულს მომდე განსხვავებული flex-shrink
+(მაგ. 0, 1, 3)
+აჩვენე როგორ იკლებს ელემენტების ზომა ადგილის ნაკლებობისას
+*/
+.box {
+    display: flex;
+    width: 200px;
+    height: 100px;
+    background-color: lightcoral;
+}
+.child-box {
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    margin: 5px;
+}
+.child-box1 {
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    margin: 5px;
+    flex-shrink: 1;
+}
+.child-box2 {
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+    margin: 5px;
+    flex-shrink: 3;
+}

@@ -1,0 +1,80 @@
+/* 1) შექმენი div ბარათი (card), რომელსაც desktop-ზე აქვს width 500px, ხოლო mobile-ზე (max-width: 600px) გახდეს 100% სიგანის. */
+.card {
+    width: 500px;
+    height: 300px;
+    background-color: lightgray;
+    margin: 20px auto;
+}
+@media (max-width: 600px) {
+    .card {
+        width: 100%;
+    }
+}
+/* 2) დაამატე ტექსტი p, რომელიც desktop-ზე იყოს ცენტრში (text-align: center), ხოლო mobile-ზე გადავიდეს მარცხნივ (text-align: left). */
+p {
+    text-align: center;
+    font-size: 24px;
+}
+@media (max-width: 600px) {
+    p {
+        text-align: left;
+    }
+}
+/* 3) შექმენი სამი div grid-ით: desktop-ზე იყოს 3 სვეტი, ხოლო mobile-ზე (max-width: 768px) დარჩეს მხოლოდ 1 სვეტი. */
+.grad {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 20px;
+}
+@media (max-width: 768px) {
+    .grad {
+        grid-template-columns: 1fr;
+    }
+}
+/* 4) შექმენი header, რომელსაც desktop-ზე აქვს სიმაღლე 100px, ხოლო mobile-ზე (max-width: 600px) სიმაღლე შემცირდეს 60px-მდე. */
+.display {
+    height: 100px;
+    background-color: #f0f0f0;
+}
+@media (max-width: 600px) {
+    .display {
+        height: 60px;
+    }
+}
+
+/* 5) დაამატე img, რომელიც desktop-ზე ჩანს, მაგრამ tablet ზომაზე (max-width: 1024px) დაიმალება. */
+img {
+    display: block;
+    margin: 20px auto;
+}
+@media (max-width: 1024px) {
+    img {
+        display: none;
+    }
+}
+
+/* 6) შექმენი button, რომელსაც mobile-ზე (max-width: 480px) ტექსტის ზომა შემცირდება, ხოლო desktop-ზე დარჩება დიდი. */
+button {
+    font-size: 20px;
+    padding: 10px 20px;
+    margin: 20px auto;
+    display: block;
+}
+@media (max-width: 480px) {
+    button {
+        font-size: 14px;
+    }
+}
+
+/* 7) შექმენი section, რომელსაც desktop-ზე აქვს დიდი padding (40px), ხოლო mobile-ზე (max-width: 768px) padding შემცირდეს 15px-მდე. */
+section {
+    padding: 40px;
+    background-color: #e0e0e0;
+    margin: 20px;
+}
+@media (max-width: 768px) {
+    section {
+        padding: 15px;
+    }
+}

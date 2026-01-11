@@ -1,0 +1,80 @@
+/* 1) შექმენი ერთი div, რომელსაც desktop-ზე აქვს ლურჯი ფონი, ხოლო როცა ეკრანის სიგანე გახდება 600px-ზე ნაკლები, ფერი შეიცვალოს წითლად @media-ის გამოყენებით. */
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+}
+@media (max-width: 600px) {
+     .box {
+        background-color: red;
+    }
+}
+
+/* 2) დაამატე გვერდზე h1 ტექსტი, რომლის ზომა desktop-ზე იქნება 40px, ხოლო mobile-ზე (max-width: 768px) შემცირდეს 24px-მდე. */
+h1 {
+    font-size: 40px;
+}
+@media (max-width: 768px) {
+    h1 {
+        font-size: 24px;
+    }
+}
+
+/* 3) შექმენი p ელემენტი, რომელიც კომპიუტერზე გამოჩნდება, მაგრამ ტელეფონზე (max-width: 480px) მთლიანად დაიმალება. */
+p {
+    display: block;
+}
+@media (max-width: 480px) {
+    p {
+        display: none;
+    }
+}
+
+/* 4) შექმენი ორი div, გამოიყენე display: flex; desktop-ზე ელემენტები იყოს ერთ ხაზზე, ხოლო mobile-ზე (max-width: 768px) გადალაგდეს ერთმანეთის ქვეშ. */
+.container {
+    display: flex;
+}
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+}
+
+/* 5) შექმენი ღილაკი (button), რომელსაც desktop-ზე აქვს 20px padding, ხოლო პატარა ეკრანებზე (max-width: 600px) padding შემცირდეს 10px-მდე. */
+button {
+    padding: 20px;
+}
+@media (max-width: 600px) {
+    button {
+        padding: 10px;
+    }
+}
+
+/* 6) დაამატე სურათი (img), რომელიც desktop-ზე იქნება 400px სიგანის, ხოლო mobile-ზე (max-width: 768px) დაიკავებს ეკრანის სრულ სიგანეს (width: 100%). */
+img {
+    width: 400px;
+}
+@media (max-width: 768px) {
+    img {
+        width: 100%;
+    }
+}
+
+/* 7) შექმენი მარტივი navigation menu ლინკებით: desktop-ზე ლინკები განლაგდეს ჰორიზონტალურად, ხოლა mobile-ზე (max-width: 768px) ვერტიკალურად. */
+nav {
+    display: flex;
+}
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+}
+/* 8) შეცვალე body-ის ფონი ეკრანის ზომის მიხედვით: desktop-ზე იყოს ღია ფერი, ხოლა mobile-ზე (max-width: 600px) გახდეს მუქი ფერი */
+body {
+    background-color: #f0f0f0;
+}
+@media (max-width: 600px) {
+    body {
+        background-color: #333333;
+    }
+}

@@ -1,0 +1,53 @@
+/*? 1) შექმენი div, რომელიც გვერდის ჩატვირთვისას ნელა გამოჩნდება — ანიმაცია უნდა დაიწყოს opacity: 0-ით და დასრულდეს opacity: 1-ზე, ხანგრძლივობა იყოს დაახლოებით 1 წამი. ბონუსად შეგიძლია დაამატო, რომ ტექსტი ან ბლოკი ოდნავ ქვემოდან ამოვიდეს translateY(20px)-დან translateY(0)-მდე. */
+.fade-in-up {
+    height: 100px;
+    width: 200px;
+    background-color: lightblue;
+    animation: fadeInUp 1s ease forwards;
+}
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*? 2) შემდეგ გააკეთე ღილაკი, რომელიც მაუსის გადატარებისას ოდნავ გაიზრდება (scale(1.1)), და ეს ცვლილება იყოს რბილი transition-ის დახმარებით, დაახლოებით 0.3 წამში. */
+.hover-button {
+    transition: transform 0.3s ease;
+}
+.hover-button:hover {
+    transform: scale(1.1);
+}
+
+/*? 3) ამის შემდეგ შექმენი წრე, რომელიც უსასრულოდ ხტუნავს — მოძრაობა უნდა იყოს ზემოთ და ქვემოთ (translateY(0 → -40px → 0)), შესრულდეს @keyframes-ით და იმეორებდეს უსასრულოდ. */
+.bouncing-circle {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    border-radius: 50%;
+    animation: bounce 2s infinite ease-in-out;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-40px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: auto;
+}

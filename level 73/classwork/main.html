@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      .red { color: red; }
+      .hidden { display: none; }
+      .bg { background-color: lightblue; }
+      .box { padding: 8px; margin: 6px 0; border: 1px solid #ccc; }
+      button { margin-right: 6px; margin-top: 6px; }
+      .container { max-width: 700px; margin: 12px auto; font-family: Arial, sans-serif; }
+      .row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+      .note { color: #555; }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <h1>კლასის სამუშაო — დავალებების დემონსტრაცია</h1>
+        <div id="myDiv" class="box">გამარჯობა, მსოფლიო</div>
+        <div class="row">
+          <button id="myButton">დაჭირე აქ</button>
+          <button id="changeQsBtn">შეცვალე querySelector-ის შიგთავსი</button>
+          <button id="changePBtn">პარაგრაფის ტექსტის შეცვლა</button>
+          <button id="toggleClassBtn">კლასის გადართვა (წითელი)</button>
+          <button id="alertBtn">აჩვენე ალერტი</button>
+        </div>
+
+        <div id="qsDiv" class="box">querySelector-ის თავდაპირველი ტექსტი</div>
+        <p id="para">ეს არის პარაგრაფი.</p>
+
+        <label>ვრცლად აკრეფე ტექსტი: <input id="liveInput" type="text" placeholder="აქ აკრიფეთ..."></label>
+        <div id="reflected" class="box"></div>
+
+        <form id="demoForm" class="box">
+          <label>სახელი: <input name="name" id="nameInput" required></label>
+          <button id="submitBtn" type="button">გაგზავნა</button>
+          <div id="result" class="result hidden"></div>
+        </form>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
